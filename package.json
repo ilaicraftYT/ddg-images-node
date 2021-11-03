@@ -1,0 +1,19 @@
+{
+  "name": "ddgimages-node",
+  "version": "1.0.0",
+  "description": "Duckduckgo images wrapper for Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "jsdoc": "^3.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  }
+}
