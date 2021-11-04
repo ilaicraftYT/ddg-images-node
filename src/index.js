@@ -1,6 +1,6 @@
 /* eslint-disable no-async-promise-executor */
 const axios = require("axios").default
-const url = "https://duckduckgo.com"
+const url = "https://duckduckgo.com/"
 
 /** DuckDuckGo safety levels
  * @constant
@@ -21,7 +21,7 @@ module.exports.SafetyLevels = {
  * @see {@link SafetyLevels} Safetylevels for the safetylevel parameter
  * @param {String} keywords The keywords to search
  * @param {Number} safetylevel The safety level of the search
- * @returns {Promise<Array>} An array of results
+ * @returns {Promise<Object>} The response from DuckDuckGo
  */
 module.exports.search = async function (keywords, safetylevel = 1){
     // headers for the request
@@ -41,7 +41,7 @@ module.exports.search = async function (keywords, safetylevel = 1){
         "accept-language": "en-US,en;q=0.9"
     }
 
-    const token = get_token(keywords)
+    const token = await get_token(keywords)
     if(!token) throw new Error("Invalid token")
 
     const params = {
@@ -50,7 +50,7 @@ module.exports.search = async function (keywords, safetylevel = 1){
         "f": ",,,",
         "q": keywords,
         "o": "json",
-        "p": "" + (safetylevel) // Strict by default
+        "p": safetylevel.toString() // Strict by default
     }
 
     function get_token(_keywords){
@@ -71,6 +71,7 @@ module.exports.search = async function (keywords, safetylevel = 1){
         })
     }
 
+    // image getter
     return new Promise(async (resolve, reject) => {
         try {
             const { data } = await axios.get(url + "i.js", {
