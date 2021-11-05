@@ -6,7 +6,7 @@ This is a fork of [Le-Val's DDGImages for Deno](https://github.com/Le-Val/ddg-im
 
 ## Usage
 ```js
-const { search, SafetyLevels } = require("ddgimages")
+const { search, SafetyLevels } = require("ddgimages-node")
 
 // remember that await is only for async functions
 const duck = await ddiamges.search('ducks')
