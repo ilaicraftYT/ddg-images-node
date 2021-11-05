@@ -6,8 +6,9 @@ This is a fork of [Le-Val's DDGImages for Deno](https://github.com/Le-Val/ddg-im
 
 ## Usage
 ```js
-const ddimages = require("ddgimages")
+const { search, SafetyLevels } = require("ddgimages")
 
+// remember that await is only for async functions
 const duck = await ddiamges.search('ducks')
 const nsfw = await ddimages.search('hentai', ddimages.SafetyLevels.STRICT) // doesn't throws any NSFW result
 

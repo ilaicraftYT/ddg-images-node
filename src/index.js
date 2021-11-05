@@ -2,19 +2,6 @@
 const axios = require("axios").default
 const url = "https://duckduckgo.com/"
 
-/** DuckDuckGo safety levels
- * @constant
- * @type {Object}
- * @property {Number} OFF Without filtering (-2)
- * @property {Number} MODERATE More safe than OFF, but still unsafe (-1)
- * @property {Number} STRICT Strict search (1)
- */
-module.exports.SafetyLevels = {
-    OFF: -2,
-    MODERATE: -1,
-    STRICT: 1
-}
-
 /**
  * Search images on DuckDuckGo
  * @async
@@ -84,4 +71,17 @@ module.exports.search = async function (keywords, safetylevel = 1){
                 reject(err)
         }
     })
+}
+
+/** DuckDuckGo safety levels
+ * @constant
+ * @type {Object}
+ * @property {Number} OFF Without filtering (-2)
+ * @property {Number} MODERATE More safe than OFF, but still unsafe (-1)
+ * @property {Number} STRICT Strict search (1)
+ */
+module.exports.SafetyLevels = {
+    OFF: -2,
+    MODERATE: -1,
+    STRICT: 1
 }
