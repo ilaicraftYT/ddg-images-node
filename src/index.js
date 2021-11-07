@@ -3,6 +3,7 @@ const axios = require("axios").default
 const url = "https://duckduckgo.com/"
 
 /**
+ * The object result provided by the search function
  * @typedef {Object} Result
  * @property {Number} width The width of the image
  * @property {Number} height The height of the image
