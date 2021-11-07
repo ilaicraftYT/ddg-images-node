@@ -16,11 +16,12 @@ const url = "https://duckduckgo.com/"
 
 /**
  * Search images on DuckDuckGo
+ * <br><b>SafetyLevel parameter default is STRICT</b>
  * @async
- * @see {@link SafetyLevels} Safetylevels for the safetylevel parameter
+ * @see {@link SafetyLevels} for the safetylevel parameter
  * @param {String} keywords The keywords to search
- * @param {SafetyLevels} safetylevel The safety level of the search **NOTE:** For default is STRICT
- * @returns {Promise<Result[]>} The response from DuckDuckGo
+ * @param {SafetyLevels} safetylevel The safety level of the search
+ * @returns {Promise<Result[]>} An array of results of the image search
  */
 module.exports.search = async function (keywords, safetylevel = 1){
     // headers for the request

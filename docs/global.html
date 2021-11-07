@@ -94,11 +94,470 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         
             
-<h4 class="name" id="SafetyLevels"><span class="type-signature">(constant) </span>SafetyLevels<span class="type-signature"> :Object</span></h4>
+
+    
+
+    
+    <h4 class="name" id="search"><span class="type-signature">(async) </span>search<span class="signature">(keywords, safetylevel)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;<a href="global.html#Result">Result</a>>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Search images on DuckDuckGo<br><b>SafetyLevel parameter default is STRICT</b>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>keywords</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The keywords to search</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>safetylevel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#SafetyLevels">SafetyLevels</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The safety level of the search</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="global.html#SafetyLevels">SafetyLevels</a> for the safetylevel parameter</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An array of results of the image search
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;Array.&lt;<a href="global.html#Result">Result</a>>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id="Result">Result</h4>
+
+
+
+
+<div class="description">
+    The object result provided by the search function
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The width of the image</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The height of the image</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>thumbnail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Image thumbnail</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>image</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The image url</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The title of the image</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The site where the image was found</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The search engine results like Google or Bing</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="SafetyLevels">SafetyLevels</h4>
 
 
 
@@ -250,7 +709,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line12">line 12</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line89">line 89</a>
     </li></ul></dd>
     
 
@@ -266,204 +725,7 @@
 
 
 
-        
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
             
-
-    
-
-    
-    <h4 class="name" id="search"><span class="type-signature">(async) </span>search<span class="signature">(keywords, safetylevel)</span><span class="type-signature"> &rarr; {Promise.&lt;Array>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Search images on DuckDuckGo
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>keywords</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The keywords to search</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>safetylevel</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The safety level of the search</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line26">line 26</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="global.html#SafetyLevels">SafetyLevels</a> Safetylevels for the safetylevel parameter</li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    An array of results
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Array></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-    
-
     
 
     
@@ -477,13 +739,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#SafetyLevels">SafetyLevels</a></li><li><a href="global.html#search">search</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#search">search</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Nov 03 2021 17:36:40 GMT-0600 (hora estándar central)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Sat Nov 06 2021 19:05:24 GMT-0600 (hora estándar central)
 </footer>
 
 <script> prettyPrint(); </script>
