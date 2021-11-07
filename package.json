@@ -3,17 +3,32 @@
   "version": "1.0.1",
   "description": "Duckduckgo images wrapper for Node",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": ["images", "ddg", "duckduckgo", "search"],
-  "author": "ilai",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0"
   },
   "devDependencies": {
     "jsdoc": "^3.6.7",
     "eslint": "^8.1.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilaicraftYT/ddg-images-node.git"
+  },
+  "keywords": [
+    "duckduckgo",
+    "images",
+    "search",
+    "google",
+    "bing",
+    "ddg"
+  ],
+  "author": "ilai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilaicraftYT/ddg-images-node/issues"
+  },
+  "homepage": "https://github.com/ilaicraftYT/ddg-images-node#readme"
 }
