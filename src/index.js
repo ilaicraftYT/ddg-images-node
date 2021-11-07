@@ -3,12 +3,23 @@ const axios = require("axios").default
 const url = "https://duckduckgo.com/"
 
 /**
+ * @typedef {Object} Result
+ * @property {Number} width The width of the image
+ * @property {Number} height The height of the image
+ * @property {String} thumbnail Image thumbnail
+ * @property {String} image The image url
+ * @property {String} title The title of the image
+ * @property {String} url The site where the image was found
+ * @property {String} source The search engine results like Google or Bing
+ */
+
+/**
  * Search images on DuckDuckGo
  * @async
  * @see {@link SafetyLevels} Safetylevels for the safetylevel parameter
  * @param {String} keywords The keywords to search
- * @param {Number} safetylevel The safety level of the search
- * @returns {Promise<Object>} The response from DuckDuckGo
+ * @param {SafetyLevels} safetylevel The safety level of the search **NOTE:** For default is STRICT
+ * @returns {Promise<Result[]>} The response from DuckDuckGo
  */
 module.exports.search = async function (keywords, safetylevel = 1){
     // headers for the request
@@ -28,7 +39,7 @@ module.exports.search = async function (keywords, safetylevel = 1){
         "accept-language": "en-US,en;q=0.9"
     }
 
-    const token = await get_token(keywords)
+    const token = await getToken(keywords)
     if(!token) throw new Error("Invalid token")
 
     const params = {
@@ -40,7 +51,7 @@ module.exports.search = async function (keywords, safetylevel = 1){
         "p": safetylevel.toString() // Strict by default
     }
 
-    function get_token(_keywords){
+    function getToken(_keywords){
         return new Promise(async (resolve, reject) =>{
             try {
                 const { data } = await axios.get(url, {
@@ -75,7 +86,7 @@ module.exports.search = async function (keywords, safetylevel = 1){
 
 /** DuckDuckGo safety levels
  * @constant
- * @type {Object}
+ * @typedef {Object} SafetyLevels
  * @property {Number} OFF Without filtering (-2)
  * @property {Number} MODERATE More safe than OFF, but still unsafe (-1)
  * @property {Number} STRICT Strict search (1)
