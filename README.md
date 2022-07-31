@@ -1,3 +1,5 @@
+> Deprecated, [official package](https://npmjs.com/package/ddgimages-deno) has been released.
+
 # DDG-Images for Node
 DuckDuckGo API Wrapper for images.
 
